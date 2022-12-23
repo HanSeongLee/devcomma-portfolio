@@ -1,0 +1,79 @@
+
+.heroSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: -98.02px;
+
+  &::before {
+    position: absolute;
+    top: 124px;
+    left: -342px;
+    width: 530px;
+    height: 129px;
+    background: url("/img/pattern-rings.svg") no-repeat;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 254px;
+    right: -65px;
+    width: 129px;
+    height: 129px;
+    background: url("/img/pattern-circle.svg") no-repeat;
+    content: "";
+  }
+
+  .profileWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+
+    .profile {
+      display: flex;
+      width: 174px;
+    }
+  }
+
+  .contentsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1.14px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+
+    .highlight {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: calc(100% - 4px);
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #4EE1A0;
+        content: "";
+      }
+    }
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
