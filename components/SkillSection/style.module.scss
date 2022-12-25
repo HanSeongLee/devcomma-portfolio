@@ -1,0 +1,29 @@
+
+.skillSection {
+  position: relative;
+  height: 100%;
+  overflow-x: clip;
+
+  &::before {
+    position: absolute;
+    bottom: -64px;
+    right: -344px;
+    width: 530px;
+    height: 129px;
+    background: url("/img/pattern-rings.svg") no-repeat;
+    content: "";
+  }
+
+  .skillContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    list-style: none;
+  }
+}
