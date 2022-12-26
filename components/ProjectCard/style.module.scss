@@ -1,0 +1,33 @@
+
+.projectCard {
+  .thumbnail {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+  }
+
+  .tagContainer {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin-bottom: 20px;
+
+    .tag {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 30px;
+  }
+}
