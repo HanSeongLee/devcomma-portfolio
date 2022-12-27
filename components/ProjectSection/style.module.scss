@@ -1,0 +1,25 @@
+
+.projectSection {
+  .titleBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -1.14px;
+      color: #FFFFFF;
+    }
+  }
+
+  .projectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    text-transform: uppercase;
+  }
+}
