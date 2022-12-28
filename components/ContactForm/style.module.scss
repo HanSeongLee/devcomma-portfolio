@@ -1,0 +1,10 @@
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .buttonContainer {
+    text-align: right;
+  }
+}
