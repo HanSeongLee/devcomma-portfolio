@@ -15,7 +15,12 @@ const HeroSection: React.FC<IProps> = ({ className, ...props }) => {
         >
             <div className={styles.profileWrapper}>
                 <picture>
-                    <source srcSet={'/img/image-profile-mobile.webp'} />
+                    <source srcSet={'/img/image-profile-mobile.webp'}
+                            media={'(max-width: 568px)'}
+                    />
+                    <source srcSet={'/img/image-profile-tablet.webp'}
+                            media={'(min-width: 568px)'}
+                    />
                     <img className={styles.profile}
                          src={'/img/image-profile-mobile.webp'}
                     />
@@ -24,7 +29,7 @@ const HeroSection: React.FC<IProps> = ({ className, ...props }) => {
 
             <Container className={styles.contentsBox}>
                 <h2 className={styles.title}>
-                    Nice to meet you! I’m <span className={styles.highlight}>Adam Keyes</span>.
+                    Nice to <br/>meet you! I’m <span className={styles.highlight}>Adam Keyes</span>.
                 </h2>
                 <p className={styles.description}>
                     Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.
