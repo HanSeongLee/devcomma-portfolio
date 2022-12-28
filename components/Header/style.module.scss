@@ -1,14 +1,24 @@
+@import "styles/utils";
 
 .header {
   position: relative;
   padding-top: 20px;
   z-index: 1;
 
+  @include media(">tablet") {
+    padding-top: 29px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+
+    @include media(">tablet") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   .socialContainer {
@@ -17,6 +27,11 @@
     align-items: center;
     gap: 25.6px;
     list-style: none;
+
+    @include media(">tablet") {
+      max-width: 192.49px;
+      gap: 32px;
+    }
 
     svg {
       width: 100%;
