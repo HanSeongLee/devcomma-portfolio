@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .logo {
   h1 {
@@ -6,5 +7,11 @@
     line-height: 32px;
     letter-spacing: -0.33px;
     color: #FFFFFF;
+
+    @include media(">tablet") {
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: -0.44px;
+    }
   }
 }
