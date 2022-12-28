@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .skillSection {
   position: relative;
@@ -12,6 +13,11 @@
     height: 129px;
     background: url("/img/pattern-rings.svg") no-repeat;
     content: "";
+
+    @include media(">tablet") {
+      bottom: -25px;
+      right: -332px;
+    }
   }
 
   .skillContainer {
@@ -25,5 +31,14 @@
     border-top: 1px solid #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
     list-style: none;
+
+    @include media(">tablet") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 52px 0;
+      text-align: left;
+      padding-top: 52px;
+      border-bottom: none;
+    }
   }
 }
