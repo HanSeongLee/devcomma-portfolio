@@ -14,14 +14,17 @@ const ContactSection: React.FC<IProps> = ({ className, ...props }) => {
                  {...props}
         >
             <Container>
-                <h2 className={styles.title}>
-                    Contact
-                </h2>
-                <p className={styles.description}>
-                    I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.
-                </p>
-                <ContactFormContainer />
-                <hr/>
+                <div className={styles.contentsWrapper}>
+                    <h2 className={styles.title}>
+                        Contact
+                    </h2>
+                    <p className={styles.description}>
+                        I would love to hear about your project and how I could help. Please fill in the form, and I’ll
+                        get back to you as soon as possible.
+                    </p>
+                    <ContactFormContainer />
+                </div>
+                <hr />
             </Container>
         </section>
     );
