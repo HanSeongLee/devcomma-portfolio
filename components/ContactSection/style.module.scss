@@ -1,0 +1,40 @@
+
+.contactSection {
+  position: relative;
+  padding: 60px 0 0;
+
+  &::before {
+    position: absolute;
+    top: 436px;
+    left: -343px;
+    width: 530px;
+    height: 129px;
+    background: url("/img/pattern-rings.svg") no-repeat;
+    content: "";
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1.14px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  hr {
+    height: 1px;
+    background: #FFFFFF;
+    border: none;
+    margin-top: 87px;
+  }
+}
