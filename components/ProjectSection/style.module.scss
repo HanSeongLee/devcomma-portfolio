@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .projectSection {
   .titleBar {
@@ -6,12 +7,22 @@
     justify-content: space-between;
     margin-bottom: 40px;
 
+    @include media(">tablet") {
+      margin-bottom: 60px;
+    }
+
     .title {
       font-weight: 700;
       font-size: 40px;
       line-height: 40px;
       letter-spacing: -1.14px;
       color: #FFFFFF;
+
+      @include media(">tablet") {
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -2.05px;
+      }
     }
   }
 
@@ -21,5 +32,11 @@
     gap: 40px;
     list-style: none;
     text-transform: uppercase;
+
+    @include media(">tablet") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px 22px;
+    }
   }
 }
