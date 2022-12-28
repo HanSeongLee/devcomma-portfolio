@@ -8,13 +8,20 @@ interface IProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, IProps>(({ error, className, children, ...props }, ref) => {
     return (
-        <div className={cn(styles.textareaWrapper, className)}>
+        <div className={cn(styles.textareaWrapper, {
+            [styles.error]: error,
+        }, className)}>
             <textarea className={styles.textarea}
                       ref={ref}
                       {...props}
             >
                 {children}
             </textarea>
+            {error && (
+                <div className={styles.errorMessage}>
+                    {error}
+                </div>
+            )}
         </div>
     );
 });
