@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .skillCard {
   .name {
@@ -6,11 +7,23 @@
     line-height: 40px;
     letter-spacing: -1px;
     color: #FFFFFF;
+
+    @include media(">tablet") {
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
+    }
   }
 
   .period {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
+
+    @include media(">tablet") {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 }
