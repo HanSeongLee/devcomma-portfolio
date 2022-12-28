@@ -1,0 +1,44 @@
+
+.textareaWrapper {
+  &.error {
+    .textarea {
+      border-bottom-color: #FF6F5B !important;
+    }
+  }
+
+  .textarea {
+    width: 100%;
+    min-height: 107px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.22px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    outline: none;
+    padding-bottom: 16px;
+    resize: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      border-bottom-color: #4EE1A0;
+    }
+  }
+
+  .errorMessage {
+    text-align: right;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.17px;
+    color: #FF6F5B;
+    margin-top: 5px;
+  }
+}
