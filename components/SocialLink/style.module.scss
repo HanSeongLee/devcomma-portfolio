@@ -1,0 +1,11 @@
+.socialLink {
+  svg path {
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    svg path {
+      fill: #4EE1A0;
+    }
+  }
+}
