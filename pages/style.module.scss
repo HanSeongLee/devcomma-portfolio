@@ -1,0 +1,44 @@
+@import "styles/utils";
+
+.main {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @include media(">tablet") {
+      gap: 60px;
+    }
+
+    @include media(">desktop") {
+      gap: 100px;
+    }
+  }
+
+  .contactSectionWrapper {
+    background: #242424;
+    padding-bottom: 60px;
+
+    @include media(">tablet") {
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @include media(">desktop") {
+      margin-top: 39px;
+      padding-bottom: 92px;
+    }
+
+    .header {
+      padding-top: 39px;
+
+      @include media(">tablet") {
+        padding-top: 30px;
+      }
+
+      @include media(">desktop") {
+        padding-top: 47px;
+      }
+    }
+  }
+}
