@@ -1,8 +1,43 @@
+@import "styles/utils";
 
 .projectCard {
-  .thumbnail {
-    width: 100%;
+  .thumbnailWrapper {
+    position: relative;
+    display: flex;
     margin-bottom: 20px;
+
+    @include media(">desktop") {
+      cursor: pointer;
+    }
+
+    &:hover {
+      .buttonContainer {
+        opacity: 1;
+      }
+    }
+
+    .thumbnail {
+      width: 100%;
+    }
+
+    .buttonContainer {
+      display: none;
+
+      @include media(">desktop") {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.75);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    }
   }
 
   .title {
@@ -19,6 +54,10 @@
     list-style: none;
     margin-bottom: 20px;
 
+    @include media(">desktop") {
+      margin-bottom: 0;
+    }
+
     .tag {
       font-weight: 500;
       font-size: 18px;
@@ -29,5 +68,9 @@
   .buttonContainer {
     display: flex;
     gap: 30px;
+
+    @include media(">desktop") {
+      display: none;
+    }
   }
 }

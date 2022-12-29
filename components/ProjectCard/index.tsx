@@ -17,10 +17,15 @@ const ProjectCard: React.FC<IProps> = ({ project, className, ...props }) => {
         <div className={cn(styles.projectCard, className)}
              {...props}
         >
-            <img className={styles.thumbnail}
-                 src={thumbnail}
-                 alt={''}
-            />
+            <div className={styles.thumbnailWrapper}>
+                <img className={styles.thumbnail}
+                     src={thumbnail}
+                     alt={''}
+                />
+                <ButtonContainer projectLink={projectLink}
+                                 codeLink={codeLink}
+                />
+            </div>
             <div className={styles.title}>
                 {title}
             </div>
@@ -33,24 +38,38 @@ const ProjectCard: React.FC<IProps> = ({ project, className, ...props }) => {
                     </li>
                 ))}
             </ul>
-            <div className={styles.buttonContainer}>
-                <a href={projectLink}
-                   target={'_blank'}
-                >
-                    <Button>
-                        View Project
-                    </Button>
-                </a>
-                <a href={codeLink}
-                   target={'_blank'}
-                >
-                    <Button>
-                        View Code
-                    </Button>
-                </a>
-            </div>
+            <ButtonContainer projectLink={projectLink}
+                             codeLink={codeLink}
+            />
         </div>
     );
 };
+
+const ButtonContainer: React.FC<HTMLAttributes<HTMLDivElement> & {
+    projectLink: string,
+    codeLink: string,
+}> = ({ projectLink, codeLink, className, ...props }) => {
+    return (
+        <div className={cn(styles.buttonContainer, className)}
+             {...props}
+        >
+            <a href={projectLink}
+               target={'_blank'}
+            >
+                <Button>
+                    View Project
+                </Button>
+            </a>
+            <a href={codeLink}
+               target={'_blank'}
+            >
+                <Button>
+                    View Code
+                </Button>
+            </a>
+        </div>
+    );
+};
+
 
 export default ProjectCard;
