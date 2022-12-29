@@ -4,6 +4,13 @@
   position: relative;
   padding: 60px 0 0;
 
+  @include media(">desktop") {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 84px;
+  }
+
   &::before {
     position: absolute;
     top: 436px;
@@ -17,19 +24,38 @@
       top: 547px;
       left: -368px;
     }
+
+    @include media(">desktop") {
+      top: 327px;
+      left: -205px;
+    }
   }
 
   .contentsWrapper {
     max-width: 445px;
     margin-left: auto;
     margin-right: auto;
+
+    @include media(">desktop") {
+      max-width: initial;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 220px
+    }
+  }
+
+  .titleBar {
+    text-align: center;
+
+    @include media(">desktop") {
+      text-align: left;
+    }
   }
 
   .title {
     font-weight: 700;
     font-size: 40px;
     line-height: 40px;
-    text-align: center;
     letter-spacing: -1.14px;
     color: #FFFFFF;
     margin-bottom: 20px;
@@ -39,13 +65,19 @@
       line-height: 72px;
       letter-spacing: -2.05px;
     }
+
+    @include media(">desktop") {
+      font-size: 88px;
+      line-height: 88px;
+      letter-spacing: -2.5px;
+      margin-bottom: 36px;
+    }
   }
 
   .description {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    text-align: center;
     margin-bottom: 50px;
 
     @include media(">tablet") {
