@@ -161,6 +161,10 @@
           top: calc(100% - 8px);
           height: 6px;
         }
+
+        @include media(">desktop") {
+          top: calc(100% - 10px);
+        }
       }
     }
 

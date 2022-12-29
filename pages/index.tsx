@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     return (
         <>
             <main className={styles.main}>
-                <Header />
+                <Header className={styles.header} />
                 <div className={styles.container}>
                     <HeroSection />
                     <SkillSection />

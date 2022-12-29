@@ -1,6 +1,12 @@
 @import "styles/utils";
 
 .main {
+  .header {
+    @include media(">desktop") {
+      margin-right: 29.51px;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: column;
