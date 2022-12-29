@@ -11,4 +11,9 @@
   text-transform: uppercase;
   cursor: pointer;
   padding-bottom: 10px;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #4EE1A0;
+  }
 }
