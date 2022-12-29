@@ -7,42 +7,60 @@ interface IProps extends HTMLAttributes<HTMLUListElement> {
 
 const projectList: Project[] = [
     {
-        thumbnail: '/img/thumbnail-project-1-small.webp',
+        thumbnail: {
+            small: '/img/thumbnail-project-1-small.webp',
+            large: '/img/thumbnail-project-1-large.webp',
+        },
         title: 'Design Portfolio',
         tags: ['HTML', 'CSS'],
         projectLink: '#',
         codeLink: '#',
     },
     {
-        thumbnail: '/img/thumbnail-project-2-small.webp',
+        thumbnail: {
+            small: '/img/thumbnail-project-2-small.webp',
+            large: '/img/thumbnail-project-2-large.webp',
+        },
         title: 'E-learning Landing Page',
         tags: ['HTML', 'CSS'],
         projectLink: '#',
         codeLink: '#',
     },
     {
-        thumbnail: '/img/thumbnail-project-3-small.webp',
+        thumbnail: {
+            small: '/img/thumbnail-project-3-small.webp',
+            large: '/img/thumbnail-project-3-large.webp',
+        },
         title: 'Todo Web App',
         tags: ['HTML', 'CSS', 'Javascript'],
         projectLink: '#',
         codeLink: '#',
     },
     {
-        thumbnail: '/img/thumbnail-project-4-small.webp',
+        thumbnail: {
+            small: '/img/thumbnail-project-4-small.webp',
+            large: '/img/thumbnail-project-4-large.webp',
+        },
         title: 'Entertainment Web App',
         tags: ['HTML', 'CSS', 'Javascript'],
         projectLink: '#',
         codeLink: '#',
     },
     {
-        thumbnail: '/img/thumbnail-project-5-small.webp',
+        thumbnail: {
+            small: '/img/thumbnail-project-5-small.webp',
+            large: '/img/thumbnail-project-5-large.webp',
+        },
         title: 'Memory Game',
         tags: ['HTML', 'CSS', 'Javascript'],
         projectLink: '#',
         codeLink: '#',
     },
     {
-        thumbnail: '/img/thumbnail-project-6-small.webp',
+        thumbnail: {
+            small: '/img/thumbnail-project-6-small.webp',
+            large: '/img/thumbnail-project-6-large.webp',
+        },
         title: 'Art Gallery Showcase',
         tags: ['HTML', 'CSS', 'Javascript'],
         projectLink: '#',

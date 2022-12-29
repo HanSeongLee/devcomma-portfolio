@@ -1,5 +1,8 @@
 type Project = {
-    thumbnail: string;
+    thumbnail: string | {
+        small: string;
+        large: string;
+    };
     title: string;
     tags: string[];
     projectLink: string;

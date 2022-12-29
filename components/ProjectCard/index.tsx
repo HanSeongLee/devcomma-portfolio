@@ -18,10 +18,23 @@ const ProjectCard: React.FC<IProps> = ({ project, className, ...props }) => {
              {...props}
         >
             <div className={styles.thumbnailWrapper}>
-                <img className={styles.thumbnail}
-                     src={thumbnail}
-                     alt={''}
-                />
+                {typeof thumbnail === 'string' ? (
+                    <img className={styles.thumbnail}
+                         src={thumbnail}
+                         alt={''}
+                    />
+                ) : (
+                    <picture>
+                        <source srcSet={thumbnail.large}
+                                media={'(min-width: 796px)'}
+                        />
+                        <source srcSet={thumbnail.small} />
+                        <img className={styles.thumbnail}
+                             src={thumbnail.small}
+                             alt={''}
+                        />
+                    </picture>
+                )}
                 <ButtonContainer projectLink={projectLink}
                                  codeLink={codeLink}
                 />
