@@ -5,6 +5,14 @@
   height: 100%;
   overflow-x: clip;
 
+  @include media(">desktop") {
+    max-width: 1110px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: visible;
+  }
+
   &::before {
     position: absolute;
     bottom: -64px;
@@ -17,6 +25,12 @@
     @include media(">tablet") {
       bottom: -25px;
       right: -332px;
+    }
+
+    @include media(">desktop") {
+      top: 253px;
+      bottom: initial;
+      right: -404px;
     }
   }
 
@@ -39,6 +53,12 @@
       text-align: left;
       padding-top: 52px;
       border-bottom: none;
+    }
+
+    @include media(">desktop") {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 58px 30px;
+      padding-top: 72px;
     }
   }
 }
