@@ -1,9 +1,9 @@
 import React, { HTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
-import Button from 'components/Button';
 import Container from 'components/Container';
 import ProjectContainer from 'containers/ProjectContainer';
+import ContactMeButton from 'components/ContactMeButton';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
 
@@ -18,9 +18,7 @@ const ProjectSection: React.FC<IProps> = ({ className, ...props }) => {
                 <h2 className={styles.title}>
                     Projects
                 </h2>
-                <Button>
-                    Contact Me
-                </Button>
+                <ContactMeButton />
             </Container>
             <Container>
                 <ProjectContainer className={styles.projectContainer} />

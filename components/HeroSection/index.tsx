@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import Container from 'components/Container';
 import cn from 'classnames';
-import Button from 'components/Button';
+import ContactMeButton from 'components/ContactMeButton';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
 
@@ -39,9 +39,7 @@ const HeroSection: React.FC<IProps> = ({ className, ...props }) => {
                         Based in the UK, I’m a front-end developer passionate about building accessible web apps that
                         users love.
                     </p>
-                    <Button>
-                        Contact Me
-                    </Button>
+                    <ContactMeButton />
                 </Container>
             </Container>
         </section>
