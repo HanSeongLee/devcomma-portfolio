@@ -9,6 +9,10 @@
     padding-top: 29px;
   }
 
+  @include media(">desktop") {
+    padding-top: 39px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -31,6 +35,10 @@
     @include media(">tablet") {
       max-width: 192.49px;
       gap: 32px;
+    }
+
+    @include media(">desktop") {
+      margin-right: 29.51px;
     }
 
     svg {
