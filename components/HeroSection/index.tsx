@@ -20,11 +20,12 @@ const HeroSection: React.FC<IProps> = ({ className, ...props }) => {
                                 media={'(min-width: 992px)'}
                         />
                         <source srcSet={'/img/image-profile-tablet.webp'}
-                                media={'(min-width: 568px)'}
+                                media={'(min-width: 768px)'}
                         />
                         <source srcSet={'/img/image-profile-mobile.webp'} />
                         <img className={styles.profile}
                              src={'/img/image-profile-mobile.webp'}
+                             alt={''}
                         />
                     </picture>
                 </div>
