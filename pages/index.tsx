@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                     <ProjectSection />
                     <div className={styles.contactSectionWrapper}>
                         <ContactSection id={'contact'} />
-                        <Header className={styles.header} />
+                        <Header className={styles.footer} />
                     </div>
                 </div>
             </main>
