@@ -45,6 +45,21 @@
       @include media(">desktop") {
         padding-top: 47px;
       }
+
+      h1 {
+        color: $white-color;
+      }
+
+      svg path {
+        fill: $white-color;
+        transition: fill 0.3s;
+      }
+
+      a:hover {
+        svg path {
+          fill: $primary-color;
+        }
+      }
     }
   }
 }

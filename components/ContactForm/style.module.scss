@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .contactForm {
   display: flex;
@@ -6,5 +7,14 @@
 
   .buttonContainer {
     text-align: right;
+
+    button {
+      color: $white-color;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
   }
 }

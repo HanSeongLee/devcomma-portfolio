@@ -39,6 +39,10 @@
 
     svg {
       width: 100%;
+
+      path {
+        fill: $black-color;
+      }
     }
   }
 }

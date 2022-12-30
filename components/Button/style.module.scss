@@ -1,19 +1,20 @@
+@import "styles/utils";
 
 .button {
   font-weight: 700;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 2.29px;
-  color: #FFFFFF;
+  color: $black-color;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #4EE1A0;
+  border-bottom: 2px solid $primary-color;
   text-transform: uppercase;
   cursor: pointer;
   padding-bottom: 10px;
   transition: color 0.3s;
 
   &:hover {
-    color: #4EE1A0;
+    color: $primary-color;
   }
 }
