@@ -11,19 +11,19 @@ const socialList: {
 }[] = [
     {
         name: 'github',
-        href: '#',
+        href: 'https://github.com/HanSeongLee',
     },
     {
         name: 'frontend-mentor',
-        href: '#',
+        href: 'https://www.frontendmentor.io/profile/HanSeongLee',
     },
     {
         name: 'linkedin',
-        href: '#',
+        href: 'https://www.linkedin.com/in/han-seong-lee-4b2488135/',
     },
     {
         name: 'twitter',
-        href: '#',
+        href: 'https://twitter.com/devComma',
     },
 ];
 
