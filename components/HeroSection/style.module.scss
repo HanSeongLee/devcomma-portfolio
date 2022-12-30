@@ -109,7 +109,7 @@
       position: absolute;
       top: 151px;
       left: 30px;
-      max-width: 445px;
+      max-width: 495px;
       align-items: flex-start;
       padding: 0;
     }
@@ -117,7 +117,7 @@
     @include media(">desktop") {
       top: 198px;
       left: auto;
-      max-width: 708px;
+      max-width: 730px;
     }
   }
 
@@ -147,6 +147,7 @@
 
     .highlight {
       position: relative;
+      display: inline-block;
 
       &::before {
         position: absolute;

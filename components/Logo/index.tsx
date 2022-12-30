@@ -14,7 +14,7 @@ const Logo: React.FC<IProps> = ({ className, ...props }) => {
                {...props}
             >
                 <h1>
-                    adamkeyes
+                    devComma
                 </h1>
             </a>
         </Link>

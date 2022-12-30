@@ -33,11 +33,11 @@ const HeroSection: React.FC<IProps> = ({ className, ...props }) => {
 
                 <Container className={styles.contentsBox}>
                     <h2 className={styles.title}>
-                        Nice to <br />meet you! I’m <span className={styles.highlight}>Adam Keyes</span>.
+                        Nice to <br />meet you! I’m <span className={styles.highlight}>HanSeong Lee</span>.
                     </h2>
                     <p className={styles.description}>
-                        Based in the UK, I’m a front-end developer passionate about building accessible web apps that
-                        users love.
+                        Based in the South Korea, I’m a full-stack engineer passionate about Software Dev & I enjoy
+                        learning new things.
                     </p>
                     <ContactMeButton />
                 </Container>
