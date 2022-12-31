@@ -9,7 +9,7 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
 const ContactFormContainer: React.FC = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = useCallback((data) => {
+    const onSubmit = useCallback((data: any) => {
         // TODO: Implement here.
         console.log(data);
     }, []);
