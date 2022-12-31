@@ -8,4 +8,5 @@ type Project = {
     tags: string[];
     projectLink: string;
     codeLink: string;
+    _createdAt: string;
 };
