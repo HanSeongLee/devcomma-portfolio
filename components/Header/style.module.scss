@@ -45,5 +45,11 @@
         transition: fill 0.3s;
       }
     }
+
+    a:hover {
+      svg path {
+        fill: $primary-color;
+      }
+    }
   }
 }
