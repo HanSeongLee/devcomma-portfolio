@@ -1,4 +1,5 @@
 type Project = {
+    _id: string;
     thumbnail: string | {
         small: string;
         large: string;

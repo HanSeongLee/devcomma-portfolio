@@ -6,10 +6,10 @@ import ProjectContainer from 'containers/ProjectContainer';
 import ContactMeButton from 'components/ContactMeButton';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
-
+    projects: Project[];
 }
 
-const ProjectSection: React.FC<IProps> = ({ className, ...props }) => {
+const ProjectSection: React.FC<IProps> = ({ projects, className, ...props }) => {
     return (
         <section className={cn(styles.projectSection, className)}
                  {...props}
@@ -21,7 +21,9 @@ const ProjectSection: React.FC<IProps> = ({ className, ...props }) => {
                 <ContactMeButton />
             </Container>
             <Container>
-                <ProjectContainer className={styles.projectContainer} />
+                <ProjectContainer className={styles.projectContainer}
+                                  projects={projects}
+                />
             </Container>
         </section>
     );

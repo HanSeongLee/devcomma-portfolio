@@ -10,16 +10,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^2.0.0",
+    "@sanity/image-url": "^1.0.1",
+    "@sanity/ui": "^1.0.6",
+    "@sanity/vision": "^3.1.2",
     "@sentry/nextjs": "^7.14.0",
     "@svgr/webpack": "^6.2.1",
     "@types/classnames": "^2.3.1",
     "include-media": "^1.4.10",
     "next": "^12.3.1",
+    "next-sanity": "^3.1.8",
     "next-sitemap": "^3.1.23",
+    "next-transpile-modules": "^10.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.41.1",
-    "sass": "^1.49.8"
+    "react-is": "^18.2.0",
+    "sanity": "^3.1.2",
+    "sass": "^1.49.8",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/node": "17.0.18",

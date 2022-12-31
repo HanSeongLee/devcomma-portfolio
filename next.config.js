@@ -1,17 +1,24 @@
 const { withSentryConfig } = require('@sentry/nextjs')
+const withTM = require('next-transpile-modules')(['sanity', '@sanity/ui']);
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withTM({
   swcMinify: true,
   reactStrictMode: true,
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
   },
-  webpack(config) {
+  webpack(config, options) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"]
+    });
+    config.module.rules.push({
+      test: /\.[jt]sx?$/,
+      include: [/node_modules(.*[/\\])+typeorm/],
+      type: "javascript/auto",
+      use: "babel-loader",
     });
     return config;
   },
@@ -24,7 +31,7 @@ const nextConfig = {
     // for more information.
     hideSourceMaps: true,
   },
-}
+});
 
 const sentryWebpackPluginOptions = {
   // Additional config options for the Sentry Webpack plugin. Keep in mind that
