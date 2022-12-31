@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .textareaWrapper {
   &.error {
@@ -28,7 +29,7 @@
     }
 
     &:focus {
-      border-bottom-color: #4EE1A0;
+      border-bottom-color: $primary-color;
     }
   }
 
