@@ -3,6 +3,8 @@ import styles from './style.module.scss';
 import Container from 'components/Container';
 import cn from 'classnames';
 import ContactMeButton from 'components/ContactMeButton';
+import RingsPattern from 'public/img/pattern-rings.svg';
+import CirclePattern from 'public/img/pattern-circle.svg';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
 
@@ -13,6 +15,9 @@ const HeroSection: React.FC<IProps> = ({ className, ...props }) => {
         <section className={cn(styles.heroSection, className)}
                  {...props}
         >
+            <div className={styles.ringsPattern}>
+                <RingsPattern />
+            </div>
             <Container className={styles.container}>
                 <div className={styles.profileWrapper}>
                     <picture>
@@ -42,6 +47,9 @@ const HeroSection: React.FC<IProps> = ({ className, ...props }) => {
                     <ContactMeButton />
                 </Container>
             </Container>
+            <div className={styles.circlePattern}>
+                <CirclePattern />
+            </div>
         </section>
     );
 };

@@ -20,14 +20,11 @@
     overflow: visible;
   }
 
-  &::before {
+  .ringsPattern {
     position: absolute;
     top: 124px;
     left: -342px;
-    width: 530px;
-    height: 129px;
-    background: url("/img/pattern-rings.svg") no-repeat;
-    content: "";
+    z-index: 0;
 
     @include media(">tablet") {
       top: 86px;
@@ -38,16 +35,21 @@
       top: 133px;
       left: -256px;
     }
+
+    svg {
+      width: 530px;
+      height: 129px;
+
+      g {
+        stroke: #767676;
+      }
+    }
   }
 
-  &::after {
+  .circlePattern {
     position: absolute;
     top: 254px;
     right: -65px;
-    width: 129px;
-    height: 129px;
-    background: url("/img/pattern-circle.svg") no-repeat;
-    content: "";
 
     @include media(">tablet") {
       top: 471px;
@@ -57,6 +59,15 @@
     @include media(">desktop") {
       top: 521px;
       right: 380px;
+    }
+
+    svg {
+      width: 129px;
+      height: 129px;
+
+      circle {
+        stroke: #767676;
+      }
     }
   }
 
