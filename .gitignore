@@ -45,3 +45,6 @@ yarn-error.log*
 
 # Compiled Sanity Studio
 /dist
+
+# Sentry
+.sentryclirc
