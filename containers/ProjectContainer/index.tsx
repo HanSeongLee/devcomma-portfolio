@@ -11,12 +11,14 @@ interface IProps extends HTMLAttributes<HTMLUListElement> {
 const ProjectContainer: React.FC<IProps> = ({ projects: initialProjects, ...props }) => {
     const [projects, setProjects] = useState(initialProjects);
     const [lastCreatedAt, setCreatedAt] = useState<string | null>(initialProjects[initialProjects.length - 1]._createdAt);
+    const [loading, setLoading] = useState(false);
 
     const loadMoreProjects = useCallback(async () => {
         if (lastCreatedAt === null) {
             return;
         }
 
+        setLoading(true);
         const result: Project[] = await client.fetch(groq`*[_type == "project" && _createdAt < $lastCreatedAt]{
         _id, title, projectLink, codeLink,
         "thumbnail": thumbnail.asset->url,
@@ -34,6 +36,7 @@ const ProjectContainer: React.FC<IProps> = ({ projects: initialProjects, ...prop
             ..._projects,
             ...result,
         ]);
+        setLoading(false);
     }, [lastCreatedAt]);
 
     return (
@@ -46,7 +49,9 @@ const ProjectContainer: React.FC<IProps> = ({ projects: initialProjects, ...prop
                 ))}
             </ul>
             {lastCreatedAt && (
-                <Pagination onLoadMore={loadMoreProjects} />
+                <Pagination onLoadMore={loadMoreProjects}
+                            loading={loading}
+                />
             )}
         </div>
     );

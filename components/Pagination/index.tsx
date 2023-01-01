@@ -5,18 +5,25 @@ import cn from 'classnames';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
     onLoadMore: () => void,
+    loading?: boolean;
 }
 
-const Pagination: React.FC<IProps> = ({ onLoadMore, className, ...props }) => {
+const Pagination: React.FC<IProps> = ({ onLoadMore, loading, className, ...props }) => {
     return (
         <div className={cn(styles.pagination, className)}
              {...props}
         >
-            <Button onClick={onLoadMore}>
+            <Button onClick={onLoadMore}
+                    disabled={loading}
+            >
                 Load More
             </Button>
         </div>
     );
+};
+
+Pagination.defaultProps = {
+    loading: false,
 };
 
 export default Pagination;

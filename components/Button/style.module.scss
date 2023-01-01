@@ -17,4 +17,10 @@
   &:hover {
     color: $primary-color;
   }
+
+  &:disabled {
+    color: $gray-color;
+    border-bottom-color: $gray-color;
+    cursor: default;
+  }
 }
