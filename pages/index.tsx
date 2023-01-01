@@ -6,18 +6,21 @@ import ProjectSection from 'components/ProjectSection';
 import ContactSection from 'components/ContactSection';
 import { client } from 'lib/sanity.client';
 import { groq } from 'next-sanity';
+import SkillSection from 'components/SkillSection';
 
 interface IProps {
+    skills: Skill[];
     projects: Project[];
 }
 
-const Home: NextPage<IProps> = ({ projects }) => {
+const Home: NextPage<IProps> = ({ skills, projects }) => {
     return (
         <>
             <main className={styles.main}>
                 <Header className={styles.header} />
                 <div className={styles.container}>
                     <HeroSection />
+                    <SkillSection skills={skills} />
                     <ProjectSection projects={projects} />
                     <div className={styles.contactSectionWrapper}>
                         <ContactSection id={'contact'} />
@@ -30,6 +33,11 @@ const Home: NextPage<IProps> = ({ projects }) => {
 };
 
 export const getStaticProps: GetStaticProps<IProps> = async () => {
+    const skills: Skill[] = await client.fetch(groq`*[_type == "skill"]{
+        _id, name,
+        "icon": icon.asset->url,
+        _createdAt,
+    } | order(_createdAt)[0...10]`);
     const projects: Project[] = await client.fetch(groq`*[_type == "project"]{
         _id, title, projectLink, codeLink,
         "thumbnail": thumbnail.asset->url,
@@ -40,6 +48,7 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
     return {
         props: {
             projects,
+            skills,
         },
     };
 }

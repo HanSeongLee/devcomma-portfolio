@@ -13,14 +13,13 @@
     overflow-x: visible;
   }
 
-  &::before {
+
+  .ringsPattern {
     position: absolute;
     bottom: -64px;
     right: -344px;
     width: 530px;
     height: 129px;
-    background: url("/img/pattern-rings.svg") no-repeat;
-    content: "";
 
     @include media(">tablet") {
       bottom: -25px;
@@ -32,13 +31,24 @@
       bottom: initial;
       right: -404px;
     }
+
+    svg {
+      width: 530px;
+      height: 129px;
+
+      g {
+        stroke: #767676;
+      }
+    }
   }
 
   .skillContainer {
     position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -47,18 +57,16 @@
     list-style: none;
 
     @include media(">tablet") {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 52px 0;
-      text-align: left;
-      padding-top: 52px;
       border-bottom: none;
     }
 
     @include media(">desktop") {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 58px 30px;
-      padding-top: 72px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 32px 10px;
+      gap: 32px;
     }
   }
 }

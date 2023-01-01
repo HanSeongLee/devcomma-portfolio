@@ -1,29 +1,44 @@
 @import "styles/utils";
 
 .skillCard {
-  .name {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1px;
-    color: $black-color;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #F8F8F8;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 16px 8px;
+
+  @include media(">tablet") {
+    width: 177px;
+    height: 179px;
+    padding: 16px 8px;
+  }
+
+  .icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
 
     @include media(">tablet") {
-      font-size: 48px;
-      line-height: 56px;
-      letter-spacing: -1.5px;
-      margin-bottom: 14px;
+      width: 62px;
+      height: 62px;
     }
   }
 
-  .period {
-    font-weight: 500;
-    font-size: 16px;
+  .name {
+    font-weight: 700;
+    font-size: 18px;
     line-height: 26px;
+    color: $black-color;
 
     @include media(">tablet") {
-      font-size: 18px;
-      line-height: 28px;
+      font-size: 24px;
+      line-height: 32px;
     }
   }
 }

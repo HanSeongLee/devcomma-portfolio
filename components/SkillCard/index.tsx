@@ -6,20 +6,18 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
     skill: Skill;
 }
 
-const SkillCard: React.FC<IProps> = ({ skill: { name, year }, className, ...props }) => {
+const SkillCard: React.FC<IProps> = ({ skill: { icon, name }, className, ...props }) => {
     return (
         <div className={cn(styles.skillCard, className)}
              {...props}
         >
+            <img className={styles.icon}
+                 src={icon}
+                 alt={name}
+            />
             <div className={styles.name}>
                 {name}
             </div>
-            {year > 0 && (
-                <p className={styles.period}>
-                    {year === 1 && `${year} Year Experience`}
-                    {year > 1 && `${year} Years Experience`}
-                </p>
-            )}
         </div>
     );
 };
