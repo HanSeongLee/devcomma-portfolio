@@ -18,7 +18,10 @@
     "@svgr/webpack": "^6.2.1",
     "@types/classnames": "^2.3.1",
     "include-media": "^1.4.10",
+    "nanoid": "^4.0.0",
     "next": "^12.3.1",
+    "next-connect": "^0.13.0",
+    "next-joi": "^2.2.1",
     "next-sanity": "^3.1.8",
     "next-sitemap": "^3.1.23",
     "next-transpile-modules": "^10.0.0",
@@ -28,6 +31,7 @@
     "react-is": "^18.2.0",
     "sanity": "^3.1.2",
     "sass": "^1.57.1",
+    "sheets-database": "^1.0.4",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

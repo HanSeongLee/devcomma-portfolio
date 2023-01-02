@@ -19,8 +19,8 @@
   }
 
   &:disabled {
-    color: $gray-color;
-    border-bottom-color: $gray-color;
-    cursor: default;
+    color: $gray-color !important;
+    border-bottom-color: $gray-color !important;
+    cursor: default !important;
   }
 }
