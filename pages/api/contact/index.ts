@@ -53,7 +53,7 @@ const post = async (
     });
 
     const slackMessage = `*[New Contact]*\n:white_small_square:Name: ${name}\n:white_small_square:Email: ${email}\n:white_small_square:Message: ${message}`
-    slackBotClient.postMessageToChannel('contact', slackMessage, {
+    await slackBotClient.postMessageToChannel('contact', slackMessage, {
         icon_url: `${process.env.NEXT_PUBLIC_URL}/apple-icon.png`,
     });
 
