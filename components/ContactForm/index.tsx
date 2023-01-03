@@ -6,6 +6,7 @@ import Button from 'components/Button';
 import TextArea from 'components/TextArea';
 import { UseFormRegister } from 'react-hook-form/dist/types/form';
 import { FieldErrors } from 'react-hook-form/dist/types/errors';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     register: UseFormRegister<any>;
@@ -50,9 +51,16 @@ const ContactForm: React.FC<IProps> = ({
             />
             <div className={styles.buttonContainer}>
                 <Button type={'submit'}
-                        disabled={loading}
+                        disabled={true}
                 >
-                    Send Message
+                    {loading && (
+                        <ClipLoader color={'#767676'}
+                                    size={18}
+                        />
+                    )}
+                    <span>
+                        Send Message
+                    </span>
                 </Button>
             </div>
         </form>
