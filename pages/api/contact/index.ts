@@ -6,6 +6,7 @@ import { nanoid } from 'nanoid';
 import { validate } from 'lib/middlewares/validation';
 import connect from 'next-connect';
 import Joi from 'joi';
+import { slackBotClient } from 'lib/slack.client';
 
 const schema = Joi.object({
     name: Joi.string().required(),
@@ -33,6 +34,11 @@ const post = async (
         email,
         message,
         timestamp,
+    });
+
+    const slackMessage = `*[New Contact]*\n:white_small_square:Name: ${name}\n:white_small_square:Email: ${email}\n:white_small_square:Message: ${message}`
+    slackBotClient.postMessageToChannel('contact', slackMessage, {
+        icon_url: `${process.env.NEXT_PUBLIC_URL}/apple-icon.png`,
     });
 
     return res.status(200).json({
