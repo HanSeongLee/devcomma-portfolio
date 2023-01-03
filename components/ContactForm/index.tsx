@@ -51,7 +51,7 @@ const ContactForm: React.FC<IProps> = ({
             />
             <div className={styles.buttonContainer}>
                 <Button type={'submit'}
-                        disabled={true}
+                        disabled={loading}
                 >
                     {loading && (
                         <ClipLoader color={'#767676'}
