@@ -7,6 +7,7 @@ import { validate } from 'lib/middlewares/validation';
 import connect from 'next-connect';
 import Joi from 'joi';
 import { slackBotClient } from 'lib/slack.client';
+import { transporter } from 'lib/nodemailer.client';
 
 const schema = Joi.object({
     name: Joi.string().required(),
@@ -34,6 +35,21 @@ const post = async (
         email,
         message,
         timestamp,
+    });
+
+    const emailContents = `We just got a form submission from you!
+    
+    * Name: ${name}
+    * Email: ${email}
+    * Message: ${message}
+    
+    Best Regards,
+    HanSeong Lee`;
+    await transporter.sendMail({
+        from: 'devComma<no-reply@devcomma.com>',
+        to: email,
+        subject: 'Thank you for submission!',
+        text: emailContents,
     });
 
     const slackMessage = `*[New Contact]*\n:white_small_square:Name: ${name}\n:white_small_square:Email: ${email}\n:white_small_square:Message: ${message}`
