@@ -15,6 +15,7 @@ const Pagination: React.FC<IProps> = ({ onLoadMore, loading, className, ...props
         >
             <Button onClick={onLoadMore}
                     disabled={loading}
+                    loading={loading}
             >
                 Load More
             </Button>
