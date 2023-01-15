@@ -32,6 +32,7 @@
     "react-hook-form": "^7.41.1",
     "react-is": "^18.2.0",
     "react-spinners": "^0.13.7",
+    "react-type-animation": "^2.1.2",
     "sanity": "^3.1.2",
     "sass": "^1.57.1",
     "sheets-database": "^1.0.4",
