@@ -120,7 +120,7 @@
       position: absolute;
       top: 151px;
       left: 30px;
-      max-width: 495px;
+      max-width: 505px;
       align-items: flex-start;
       padding: 0;
     }
@@ -128,11 +128,12 @@
     @include media(">desktop") {
       top: 198px;
       left: auto;
-      max-width: 730px;
+      max-width: 780px;
     }
   }
 
   .title {
+    min-height: 90px;
     font-weight: 700;
     font-size: 40px;
     line-height: 40px;
@@ -142,6 +143,7 @@
     margin-bottom: 24px;
 
     @include media(">tablet") {
+      min-height: 220px;
       font-size: 72px;
       line-height: 72px;
       letter-spacing: -2.05px;
@@ -150,6 +152,7 @@
     }
 
     @include media(">desktop") {
+      min-height: 190px;
       font-size: 88px;
       line-height: 88px;
       letter-spacing: -2.5px;
