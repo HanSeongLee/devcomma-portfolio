@@ -1,0 +1,36 @@
+@import "styles/utils";
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  @include media(">tablet") {
+    margin-bottom: 60px;
+  }
+
+  @include media(">desktop") {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.14px;
+    color: $black-color;
+
+    @include media(">tablet") {
+      font-size: 72px;
+      line-height: 72px;
+      letter-spacing: -2.05px;
+    }
+
+    @include media(">desktop") {
+      font-size: 88px;
+      line-height: 88px;
+      letter-spacing: -2.5px;
+    }
+  }
+}

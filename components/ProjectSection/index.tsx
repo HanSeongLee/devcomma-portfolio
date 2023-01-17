@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import cn from 'classnames';
 import Container from 'components/Container';
 import ProjectContainer from 'containers/ProjectContainer';
-import ContactMeButton from 'components/ContactMeButton';
+import TitleBar from 'components/TitleBar';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
     projects: Project[];
@@ -14,12 +14,7 @@ const ProjectSection: React.FC<IProps> = ({ projects, className, ...props }) => 
         <section className={cn(styles.projectSection, className)}
                  {...props}
         >
-            <Container className={styles.titleBar}>
-                <h2 className={styles.title}>
-                    Projects
-                </h2>
-                <ContactMeButton />
-            </Container>
+            <TitleBar title={'Projects'} />
             <Container>
                 <ProjectContainer className={styles.projectContainer}
                                   projects={projects}
