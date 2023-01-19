@@ -14,7 +14,9 @@ const ProjectSection: React.FC<IProps> = ({ projects, className, ...props }) => 
         <section className={cn(styles.projectSection, className)}
                  {...props}
         >
-            <TitleBar title={'Projects'} />
+            <TitleBar title={'Projects'}
+                      displayContactMe
+            />
             <Container>
                 <ProjectContainer className={styles.projectContainer}
                                   projects={projects}
