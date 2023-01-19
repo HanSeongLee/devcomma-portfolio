@@ -82,12 +82,14 @@
     position: relative;
     display: flex;
     justify-content: center;
+    -webkit-justify-content: center;
     width: 100%;
     margin-bottom: 40px;
 
     @include media(">tablet") {
       right: -31px;
       justify-content: right;
+      -webkit-justify-content: flex-end;
     }
 
     @include media(">desktop") {
