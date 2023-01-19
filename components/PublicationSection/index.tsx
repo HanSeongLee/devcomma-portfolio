@@ -14,7 +14,9 @@ const PublicationSection: React.FC<IProps> = ({ publications, className, ...prop
         <section className={cn(styles.publicationSection, className)}
                  {...props}
         >
-            <TitleBar title={'Publications'} />
+            <TitleBar title={'Publications'}
+                      displayContactMe={false}
+            />
 
             <Container>
                 <PublicationContainer className={styles.publicationContainer}
