@@ -117,6 +117,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
+
+    @include media(">375px") {
+      padding: 0 16px;
+    }
 
     @include media(">tablet") {
       position: absolute;
