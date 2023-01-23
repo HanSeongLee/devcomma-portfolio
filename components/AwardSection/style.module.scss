@@ -1,0 +1,10 @@
+@import "styles/utils";
+
+.awardSection {
+  .awardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+  }
+}
