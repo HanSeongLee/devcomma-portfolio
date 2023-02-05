@@ -27,6 +27,7 @@
     "next-sanity": "^3.1.8",
     "next-sitemap": "^3.1.23",
     "next-transpile-modules": "^10.0.0",
+    "nextjs-google-analytics": "^2.3.0",
     "nodemailer": "^6.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
