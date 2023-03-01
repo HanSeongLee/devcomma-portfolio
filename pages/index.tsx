@@ -9,15 +9,20 @@ import { groq } from 'next-sanity';
 import SkillSection from 'components/SkillSection';
 import PublicationSection from 'components/PublicationSection';
 import AwardSection from 'components/AwardSection';
+import BookSection from 'components/BookSection';
 
 interface IProps {
     skills: Skill[];
     projects: Project[];
     publications: Publication[];
     awards: Award[];
+    books: Book[];
 }
 
-const Home: NextPage<IProps> = ({ skills, projects, publications, awards }) => {
+const Home: NextPage<IProps> = ({
+                                    skills, projects, publications, awards,
+                                    books
+                                }) => {
     return (
         <>
             <main className={styles.main}>
@@ -26,6 +31,7 @@ const Home: NextPage<IProps> = ({ skills, projects, publications, awards }) => {
                     <HeroSection />
                     <SkillSection skills={skills} />
                     <PublicationSection publications={publications} />
+                    <BookSection books={books} />
                     <AwardSection awards={awards} />
                     <ProjectSection projects={projects} />
                     <div className={styles.contactSectionWrapper}>
@@ -58,6 +64,10 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
         "tags": tags[]->name,
         _createdAt,
     } | order(_createdAt desc)[0...6]`);
+    const books: Book[] = await client.fetch(groq`*[_type == "book"]{
+        _id, "thumbnail": thumbnail.asset->url, title, date, 
+        authors, publisher, link, _createdAt,
+    } | order(_createdAt desc)[0...6]`);
 
     return {
         props: {
@@ -65,6 +75,7 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
             skills,
             publications,
             awards,
+            books
         },
     };
 }

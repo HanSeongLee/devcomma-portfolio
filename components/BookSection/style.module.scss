@@ -1,0 +1,15 @@
+@import "styles/utils";
+
+.bookSection {
+  .bookContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+
+    @include media(">desktop") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
