@@ -1,1 +1,1 @@
-type SocialName = 'github' | 'frontend-mentor' | 'linkedin' | 'twitter';
+type SocialName = 'github' | 'frontend-mentor' | 'linkedin' | 'twitter' | 'ens';

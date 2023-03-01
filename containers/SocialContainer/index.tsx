@@ -25,6 +25,10 @@ const socialList: {
         name: 'twitter',
         href: 'https://twitter.com/devComma',
     },
+    {
+        name: 'ens',
+        href: 'https://app.ens.domains/name/devcomma.eth/details',
+    },
 ];
 
 const SocialContainer: React.FC<IProps> = ({ ...props }) => {

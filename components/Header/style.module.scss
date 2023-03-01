@@ -26,14 +26,14 @@
   }
 
   .socialContainer {
-    max-width: 153.99px;
+    max-width: 188.99px;
     display: flex;
     align-items: center;
     gap: 25.6px;
     list-style: none;
 
     @include media(">tablet") {
-      max-width: 192.49px;
+      max-width: 227.49px;
       gap: 32px;
     }
 
