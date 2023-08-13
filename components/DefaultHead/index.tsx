@@ -1,4 +1,5 @@
 import React from 'react';
+import Script from 'next/script';
 
 interface IProps {
     title?: string;
@@ -72,6 +73,13 @@ const DefaultHead: React.FC<IProps> = ({ title, description, url, ogi }) => {
             <meta name="msapplication-TileColor" content="#F8F8F8" />
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
             <meta name="theme-color" content="#F8F8F8" />
+
+            {process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT && (
+                <Script async
+                        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT}`}
+                        crossOrigin="anonymous"
+                    />
+            )}
         </>
     );
 };
