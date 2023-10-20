@@ -4,7 +4,7 @@ import cn from 'classnames';
 import GitHubIcon from '/public/icons/icon-github.svg';
 import FrontendMentorIcon from '/public/icons/icon-frontend-mentor.svg';
 import LinkedInIcon from '/public/icons/icon-linkedin.svg';
-import TwitterIcon from '/public/icons/icon-twitter.svg';
+import { RiTwitterXLine } from 'react-icons/ri';
 import ENSIcon from '/public/icons/icon-ens.svg';
 
 interface IProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -15,7 +15,7 @@ const icons = {
     github: <GitHubIcon />,
     'frontend-mentor': <FrontendMentorIcon />,
     linkedin: <LinkedInIcon />,
-    twitter: <TwitterIcon />,
+    twitter: <RiTwitterXLine />,
     ens: <ENSIcon />,
 };
 

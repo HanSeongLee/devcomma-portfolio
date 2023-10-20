@@ -1,8 +1,12 @@
 @import "styles/utils";
 
 .socialLink {
-  svg path {
-    transition: fill 0.3s;
+  svg {
+    height: 19.2px;
+
+    path {
+      transition: fill 0.3s;
+    }
   }
 
   &:hover {
